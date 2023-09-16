@@ -1,0 +1,6 @@
+hyprland
+waybar-hyprland
+xdg-desktop-portal-hyprland
+wl-clipboard
+hyprpaper
+vim
