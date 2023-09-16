@@ -7,8 +7,8 @@
 	"pulseaudio": {
 		"tooltip": false,
         "states": {
-            "ok": 0,
-            "loud": 90
+            "ok": 100,
+            "loud": 500
         },
 		"scroll-step": 5,
 		"format": "{icon} {volume}%",
