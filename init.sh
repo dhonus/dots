@@ -5,7 +5,7 @@
 
 if ! command -v paru &> /dev/null
 then
-    echo "paru could not be found"
+    echo "Paru could not be found"
     read -p "Continue without installing packages? [y/N] " -n 1 -r
     echo
     if [[ ! $REPLY =~ ^[Yy]$ ]]
@@ -13,11 +13,11 @@ then
         exit 1
     fi
     echo "Read packages.txt for a list of packages to install"
+else
+    echo "Installing packages..."
+    paru -S --needed - < packages.txt
+    echo "Done"
 fi
-
-echo "Installing packages..."
-paru -S --needed - < packages.txt
-echo "Done"
 
 echo "Linking dotfiles..."
 ln -sf $PWD/hypr/hyprland.conf $HOME/.config/hypr/hyprland.conf
