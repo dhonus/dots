@@ -25,7 +25,17 @@ ln -sf $PWD/hypr/hyprpaper.conf $HOME/.config/hypr/hyprpaper.conf
 
 ln -sf $PWD/.zshrc $HOME/.zshrc
 
-ln -sf $PWD/.vimrc $HOME/.vimrc
+ln -sf $PWD/vim/.vimrc $HOME/.vimrc
+
+read -p "Install vim-plug? [y/N] " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo "Installing vim-plug..."
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    echo "Done"
+fi
 
 ln -sf $PWD/waybar/config $HOME/.config/waybar/config
 ln -sf $PWD/waybar/style.css $HOME/.config/waybar/style.css
