@@ -164,11 +164,8 @@ window#waybar.hidden {
 	background: #F8BD96;
 }
 #clock {
-	margin-top: 6px;
-    margin-bottom: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
+	margin: 6px 0px 6px 8px;
+	padding: 0px 10px 0px 10px;
 	border-radius: 10px;
 	transition: none;
 	color: #161320;
@@ -177,11 +174,8 @@ window#waybar.hidden {
 }
 
 #memory {
-	margin-top: 6px;
-    margin-bottom: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
+	margin: 6px 0px 6px 8px;
+	padding: 0px 10px 0px 10px;
 	border-radius: 10px;
 	transition: none;
 	color: #161320;
@@ -202,12 +196,13 @@ window#waybar.hidden {
 #tray {
 	margin-top: 6px;
 	margin-left: 8px;
+	margin-bottom: 6px;
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
 	color: #B5E8E0;
-	background: #161320;
+	background: #302f31;
 }
 
 #custom-launcher {
