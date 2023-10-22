@@ -34,7 +34,7 @@ window#waybar.hidden {
 
 #tags button {
 	transition: none;
-	color: #B5E8E0;
+	color: #e4e4e4;
 	background: transparent;
 	font-size: 16px;
 	border-radius: 2px;
@@ -74,14 +74,15 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: .3s ease;
-	color: #161320;
-	background: #f2a98f;
+	color: #eae7f5;
+	background: #202020;
 }
 #workspaces button.active {
-	background: #d8c5ca;
+	background: #294e92;
+	background: #96242f;
 }
 #workspaces button:hover {
-	background: #f2a98f;
+	background: #3b3b3b;
 	transition: .3s ease;
 }
 
@@ -93,8 +94,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #bd93f9;
+	color: #eae7f5;
+	background: #202020;
 }
 
 #pulseaudio {
@@ -105,12 +106,12 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #1A1826;
-	background: #FAE3B0;
+	color: #eae7f5;
+	background: #202020;
 }
 #pulseaudio.muted {
-	color: #1A1826;
-	background: #BF616A;
+	color: #eae7f5;
+	background: #a53742;
 }
 
 #pulseaudio.loud {
@@ -126,18 +127,19 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #B5E8E0;
+	color: #eae7f5;
+	background: #202020;
 }
 
 #battery.charging, #battery.plugged {
-	color: #161320;
-    background-color: #B5E8E0;
+	color: white;
+	background: #294e92;
+	background: #96242f;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #B5E8E0;
-    color: #161320;
+    color: #eae7f5;
+	background: #202020;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -147,8 +149,8 @@ window#waybar.hidden {
 
 @keyframes blink {
     to {
-        background-color: #BF616A;
-        color: #B5E8E0;
+        background-color: #a83a45;
+        color: #eae7f5;
     }
 }
 
@@ -160,16 +162,16 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #F8BD96;
+	color: #eae7f5;
+	background: #202020;
 }
 #clock {
 	margin: 6px 0px 6px 8px;
 	padding: 0px 10px 0px 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #ABE9B3;
+	color: #eae7f5;
+	background: #202020;
 	/*background: #1A1826;*/
 }
 
@@ -178,8 +180,8 @@ window#waybar.hidden {
 	padding: 0px 10px 0px 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #DDB6F2;
+	color: #eae7f5;
+	background: #202020;
 }
 #cpu {
 	margin-top: 6px;
@@ -189,8 +191,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #96CDFB;
+	color: #eae7f5;
+	background: #202020;
 }
 
 #tray {
@@ -201,8 +203,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #B5E8E0;
-	background: #302f31;
+	color: #eae7f5;
+	background: #202020;
 }
 
 #custom-launcher {
@@ -213,8 +215,8 @@ window#waybar.hidden {
 	padding-right: 5px;
 	border-radius: 10px;
 	transition: none;
-    color: #89DCEB;
-    background: #161320;
+	color: #eae7f5;
+	background: #202020;
 }
 
 #custom-power {
@@ -227,8 +229,8 @@ window#waybar.hidden {
 	padding-right: 5px;
 	border-radius: 10px;
 	transition: none;
-	color: #e5e3ea;
-	background: #b34062;
+	color: #eae7f5;
+	background: #202020;
 }
 
 #custom-wallpaper {
@@ -239,8 +241,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #C9CBFF;
+	color: #eae7f5;
+	background: #202020;
 }
 
 #custom-updates {
@@ -251,8 +253,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #E8A2AF;
+	color: #eae7f5;
+	background: #202020;
 }
 
 #custom-music {
@@ -263,8 +265,8 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #F2CDCD;
+	color: #eae7f5;
+	background: #202020;
 }
 
 #custom-lock {
@@ -275,6 +277,6 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
-	color: #161320;
-	background: #F2CDCD;
+	color: #eae7f5;
+	background: #202020;
 }
