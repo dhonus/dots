@@ -27,6 +27,8 @@ ln -sf $PWD/.zshrc $HOME/.zshrc
 
 ln -sf $PWD/vim/.vimrc $HOME/.vimrc
 
+ln -sf $PWD/.wezterm.lua $HOME/.wezterm.lua
+
 read -p "Install vim-plug? [y/N] " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]

@@ -4,3 +4,4 @@ xdg-desktop-portal-hyprland
 wl-clipboard
 hyprpaper
 vim
+wezterm
