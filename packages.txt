@@ -4,4 +4,7 @@ xdg-desktop-portal-hyprland
 wl-clipboard
 hyprpaper
 vim
+neovim
 wezterm
+
+lua-language-server
