@@ -52,6 +52,5 @@ then
     echo "Done"
 fi
 
-
 ln -sf $PWD/waybar/config $HOME/.config/waybar/config
 ln -sf $PWD/waybar/style.css $HOME/.config/waybar/style.css

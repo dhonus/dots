@@ -111,7 +111,7 @@ window#waybar.hidden {
 }
 #pulseaudio.muted {
 	color: #eae7f5;
-	background: #a53742;
+	background: #96242f;
 }
 
 #pulseaudio.loud {

@@ -1,10 +1,11 @@
+ttf-fira-code
 hyprland
-waybar-hyprland
+waybar
 xdg-desktop-portal-hyprland
 wl-clipboard
 hyprpaper
+rofi-lbonn-wayland
 vim
 neovim
 wezterm
-
 lua-language-server
