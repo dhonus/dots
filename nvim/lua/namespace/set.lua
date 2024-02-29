@@ -10,3 +10,5 @@ vim.opt.smartindent = true
 
 vim.opt.incsearch = true
 
+vim.opt.termguicolors = true
+
