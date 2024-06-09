@@ -101,9 +101,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias yoga="bash ~/yoga-slim-7-manager/yoga.sh"
 
-
 source /usr/share/nvm/init-nvm.sh
 alias vim="nvim"
 alias emac="emacs -nw"
 
 export PATH="$(yarn global bin):$PATH"
+
+export PATH=$PATH:~/.cargo/bin/

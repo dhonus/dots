@@ -12,3 +12,5 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
+vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')
+

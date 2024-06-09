@@ -149,3 +149,9 @@ set cursorline
 highlight CursorLine term=bold cterm=NONE ctermbg=238 ctermfg=none gui=bold
 
 highlight CursorLineNr term=bold cterm=none ctermbg=238  ctermfg=yellow gui=bold
+
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
+
