@@ -8,7 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="re5et"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,8 +104,11 @@ alias yoga="bash ~/yoga-slim-7-manager/yoga.sh"
 
 source /usr/share/nvm/init-nvm.sh
 alias vim="nvim"
+alias v="NVIM_APPNAME=astronvim nvim ~/.config/astronvim/init.lua"
 alias emac="emacs -nw"
 
 export PATH="$(yarn global bin):$PATH"
 
 export PATH=$PATH:~/.cargo/bin/
+
+export PATH=$PATH:/home/daniel/workspace/work/pgdist/src

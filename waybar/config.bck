@@ -1,10 +1,9 @@
 {
 	"layer": "top",
     "position": "bottom",
-    "reload_style_on_change": true,
 	"modules-left": ["cpu","memory","network","custom/media","tray", "custom/music"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["cava", "backlight","pulseaudio", "clock", "battery","custom/power"],
+	"modules-right": ["custom/wallpaper","backlight","pulseaudio", "clock", "battery","custom/power"],
 	"pulseaudio": {
 		"tooltip": false,
         "states": {
@@ -31,7 +30,7 @@
 		"tooltip": false,
 		"format-wifi": "  {essid}",
 		"format-ethernet": "",
-        "format": "Offline",
+        "format": "No internet",
         "on-click": "st -e nmtui"
 	},
 	"backlight": {
@@ -41,36 +40,6 @@
         "on-scroll-up": "light -A 5",
 		"on-scroll-down": "light -U 5"
 	},
-    "cava": {
-        "framerate": 40,
-        "autosens": 1,
-        "bars": 18,
-        "lower_cutoff_freq": 50,
-        "higher_cutoff_freq": 20000,
-        "method": "pulse",
-        "source": "auto",
-        "stereo": true,
-        "reverse": false,
-        "bar_delimiter": 0,
-        "monstercat": true,
-        "waves": true,
-        "noise_reduction": 0.5,
-        "input_delay": 0,
-        "hide_on_silence": false,
-        "format-icons": [
-            "▁",
-            "▂",
-            "▃",
-            "▄",
-            "▅",
-            "▆",
-            "▇",
-            "█"
-        ],
-        "actions": {
-            "on-click-right": "mode"
-        }
-    },
     "battery": {
         "states": {
             "good": 95,
@@ -86,39 +55,30 @@
     },
 	"tray":{
 		"icon-size": 18,
-		"spacing": 9
+		"spacing": 10
 	},
     "clock": {
         "interval": 1,
-        "format": "{:%I:%M:%S %p  %d/%m/%Y %a}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "calendar-weeks-pos": "right",
-        "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
-        "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
-        "format-calendar-weeks": "<span color='#99ffdd'><b>W{:%V}</b></span>",
-        "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "on-scroll": {
-                    "calendar": 1
-                     }
+        "format": "{: %I:%M:%S %p  %d/%m/%Y %a}"
     },
     "cpu": {
         "interval": 15,
-        "format": "  {}%",
+        "format": " {}%",
         "max-length": 10
     },
     "memory": {
-        "interval": 15,
-        "format": "{}% RAM",
+        "interval": 30,
+        "format": " {}% RAM",
         "max-length": 10
     },
     "custom/media": {
-        "interval": 15,
+        "interval": 30,
         "format": "{icon} {}",
         "return-type": "json",
         "max-length": 30,
         "format-icons": {
             "spotify": " ",
-            "default": "♫"
+            "default": " "
         },
         "escape": true,
         "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
@@ -149,6 +109,10 @@
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
         "interval": 1500
+    },
+    "custom/wallpaper":{
+        "format":" ",
+        "on-click": "grim && notify-send 'Screenshot taken'"
     },
     "custom/lock": {
         "format": " Lock",
