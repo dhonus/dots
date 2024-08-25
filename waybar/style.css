@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-	background: rgba(0, 0, 0, 0.75);
+	background-color: rgba(0, 0, 0, 0.75);
 }
 
 window#waybar.hidden {
@@ -79,9 +79,10 @@ window#waybar.hidden {
 #workspaces button.active {
 	background: #294e92;
 	background: #96242f;
+    background: #8a2755;
 }
 #workspaces button:hover {
-	background: #3b3b3b;
+	background: rgba(255, 255, 255, 0.04);
 	transition: .3s ease;
 }
 
@@ -145,6 +146,7 @@ window#waybar.hidden {
 #battery.charging, #battery.plugged {
 	color: white;
 	background: #96242f;
+    background: #8a2755;
 }
 
 #battery.critical:not(.charging) {
@@ -289,4 +291,24 @@ window#waybar.hidden {
 	transition: none;
 	color: #eae7f5;
 	background: rgba(255, 255, 255, 0.06);
+}
+#window {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 10px;
+    transition: none;
+	color: #eae7f5;
+	background: rgba(255, 255, 255, 0.06);
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+    transition: background-color 0s;
+}
+window#waybar.empty, window#waybar.floating {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s;
 }

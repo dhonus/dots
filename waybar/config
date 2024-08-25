@@ -1,46 +1,75 @@
 {
-	"layer": "top",
-    "position": "bottom",
+    "layer": "top",
+    "position": "top",
     "reload_style_on_change": true,
-	"modules-left": ["cpu","memory","network","custom/media","tray", "custom/music"],
-	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["cava", "backlight","pulseaudio", "clock", "battery","custom/power"],
-	"pulseaudio": {
-		"tooltip": false,
+    "modules-left": [
+        "hyprland/workspaces",
+        "cpu",
+        "memory",
+        "hyprland/window",
+        "custom/media"
+    ],
+    "modules-center": [
+        "clock",
+        "tray"
+    ],
+    "modules-right": [
+        "custom/music",
+        "cava",
+        "backlight",
+        "pulseaudio",
+        "battery",
+        "custom/power"
+    ],
+    "pulseaudio": {
+        "tooltip": false,
         "states": {
             "ok": 100,
             "loud": 500
         },
-		"scroll-step": 5,
-		"format": "{icon} {volume}%",
+        "scroll-step": 5,
+        "format": "{icon} {volume}%",
         "format-muted": " Muted",
-		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
-		"format-icons": {
-			"default": ["", "", ""]
-		}
-	},
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
     "hyprland/workspaces": {
         "format": "{}",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1"
-   },
-    "river/tags": {
-		"num-tags": 6
     },
-	"network": {
-		"tooltip": false,
-		"format-wifi": "  {essid}",
-		"format-ethernet": "",
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 25,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "🌎 $1",
+            "(.*) - zsh": "> [$1]"
+        },
+        "separate-outputs": true
+    },
+    "river/tags": {
+        "num-tags": 6
+    },
+    "network": {
+        "tooltip": false,
+        "format-wifi": "  {essid}",
+        "format-ethernet": "",
         "format": "Offline",
         "on-click": "st -e nmtui"
-	},
-	"backlight": {
-		"tooltip": false,
-		"format": " {}%",
-		"interval":1,
+    },
+    "backlight": {
+        "tooltip": false,
+        "format": " {}%",
+        "interval": 1,
         "on-scroll-up": "light -A 5",
-		"on-scroll-down": "light -U 5"
-	},
+        "on-scroll-down": "light -U 5"
+    },
     "cava": {
         "framerate": 40,
         "autosens": 1,
@@ -81,13 +110,19 @@
         "format-charging": " {capacity}% {time}",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""],
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
         "format-time": "{H}:{M}"
     },
-	"tray":{
-		"icon-size": 18,
-		"spacing": 9
-	},
+    "tray": {
+        "icon-size": 18,
+        "spacing": 9
+    },
     "clock": {
         "interval": 1,
         "format": "{:%I:%M:%S %p  %d/%m/%Y %a}",
@@ -98,8 +133,8 @@
         "format-calendar-weeks": "<span color='#99ffdd'><b>W{:%V}</b></span>",
         "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
         "on-scroll": {
-                    "calendar": 1
-                     }
+            "calendar": 1
+        }
     },
     "cpu": {
         "interval": 15,
@@ -124,27 +159,27 @@
         "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
         "on-click": "playerctl play-pause"
     },
-    "custom/launcher":{
+    "custom/launcher": {
         "format": " ",
         "on-click": "rofi -show drun",
         "on-click-right": "killall rofi"
     },
-    "custom/power":{
+    "custom/power": {
         "format": " ",
         "on-click": "hyprctl dispatch exit"
     },
     "custom/music": {
         "format": "{icon} {}",
-        "max-length": 30,
+        "max-length": 50,
         "format-icons": {
             "spotify": " ",
             "default": " "
         },
         "escape": true,
-        "exec": " bash /home/daniel/music-status-bash/current_song | head",
+        "exec": " bash /home/daniel/workspace/personal/music-status-bash/current_song | head",
         "interval": 15
     },
-    "custom/updates":{
+    "custom/updates": {
         "format": "{} Update(s)",
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
@@ -153,6 +188,10 @@
     "custom/lock": {
         "format": " Lock",
         "on-click": "swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.7 --ring-color ffffff --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 0 --fade-in 0.3"
+    },
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
     }
 }
-

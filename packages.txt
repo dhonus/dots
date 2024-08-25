@@ -9,3 +9,4 @@ vim
 neovim
 wezterm
 lua-language-server
+dunst

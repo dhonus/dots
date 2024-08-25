@@ -31,6 +31,9 @@ ln -sf $PWD/vim/.vimrc $HOME/.vimrc
 
 ln -sf $PWD/.wezterm.lua $HOME/.wezterm.lua
 
+mkdir $HOME/.config/dunst
+ln -sf $PWD/dunstrc $HOME/.config/dunst/dunstrc
+
 read -p "Install vim-plug? [y/N] " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
