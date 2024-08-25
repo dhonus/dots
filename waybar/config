@@ -18,8 +18,8 @@
         "cava",
         "backlight",
         "pulseaudio",
-        "battery",
-        "custom/power"
+        "pulseaudio/slider",
+        "battery"
     ],
     "pulseaudio": {
         "tooltip": false,
@@ -28,7 +28,7 @@
             "loud": 500
         },
         "scroll-step": 5,
-        "format": "{icon} {volume}%",
+        "format": "{icon}  {volume}%",
         "format-muted": " Muted",
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "format-icons": {
@@ -38,6 +38,11 @@
                 ""
             ]
         }
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
     },
     "hyprland/workspaces": {
         "format": "{}",
@@ -137,14 +142,16 @@
         }
     },
     "cpu": {
-        "interval": 15,
-        "format": "  {}%",
-        "max-length": 10
+        "interval": 1,
+        "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7} {usage:>2}%",
+	    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "max-length": 17
     },
     "memory": {
         "interval": 15,
-        "format": "{}% RAM",
-        "max-length": 10
+        "format": "{used:0.2f} / {total:0.1f}GiB",
+        "on-click": "kitty -e htop",
+        "max-length": 15
     },
     "custom/media": {
         "interval": 15,
