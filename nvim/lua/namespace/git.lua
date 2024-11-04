@@ -1,12 +1,12 @@
 require('gitsigns').setup {
-  signs = {
-    add          = { hl = 'GitSignsAdd',    text = '▎', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
-    change       = { hl = 'GitSignsChange', text = '▎', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
-    delete       = { hl = 'GitSignsDelete', text = '▎', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
-    topdelete    = { hl = 'GitSignsDelete', text = '▎', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
-    changedelete = { text = '~' },
-    untracked    = { hl = 'GitSignsUntracked', text = '▎', numhl = 'GitSignsUntrackedNr', linehl = 'GitSignsUntrackedLn' },
-  },
+  -- signs = {
+  --   add          = { hl = 'GitSignsAdd',    text = '▎', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
+  --   change       = { hl = 'GitSignsChange', text = '▎', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+  --   delete       = { hl = 'GitSignsDelete', text = '▎', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+  --   topdelete    = { hl = 'GitSignsDelete', text = '▎', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+  --   changedelete = { text = '~' },
+  --   untracked    = { hl = 'GitSignsUntracked', text = '▎', numhl = 'GitSignsUntrackedNr', linehl = 'GitSignsUntrackedLn' },
+  -- },
   signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
   numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
   linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
@@ -19,8 +19,8 @@ require('gitsigns').setup {
   current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
   current_line_blame_opts = {
     virt_text = true,
-    virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
-    delay = 1000,
+    virt_text_pos = 'right_align', -- 'eol' | 'overlay' | 'right_align'
+    delay = 250,
     ignore_whitespace = false,
     virt_text_priority = 100,
   },
@@ -37,7 +37,7 @@ require('gitsigns').setup {
     row = 0,
     col = 1
   },
-  yadm = {
-    enable = false
-  },
+  --yadm = {
+  --  enable = false
+  --},
 }

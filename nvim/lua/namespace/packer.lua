@@ -26,6 +26,13 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
 
+  use "rebelot/kanagawa.nvim"
+
+  use 'neovim/nvim-lspconfig'
+  -- use 'jose-elias-alvarez/null-ls.nvim'
+  -- use 'MunifTanjim/eslint.nvim'
+
+
   use {
 	  'nvim-telescope/telescope.nvim', branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
@@ -33,9 +40,9 @@ return require('packer').startup(function(use)
 
   -- nvim-colorizer
   use 'norcalli/nvim-colorizer.lua'
-  use 'chriskempson/base16-vim'
-  use 'morhetz/gruvbox'
-  use 'junegunn/seoul256.vim'
+  --use 'chriskempson/base16-vim'
+  --use 'morhetz/gruvbox'
+ -- use 'junegunn/seoul256.vim'
 
   -- lukas-reineke/indent-blankline.nvim
   use { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }

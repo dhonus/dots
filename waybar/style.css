@@ -109,6 +109,7 @@ window#waybar.hidden {
 #workspaces button:hover {
 	background: rgba(255, 255, 255, 0.04);
 	transition: .3s ease;
+    border: 1px solid #6a1e42;
 }
 
 #network {
@@ -143,6 +144,7 @@ window#waybar.hidden {
 	color: #dad8e6;
 	background: #c1282d;
 }
+
 #pulseaudio-slider {
 	margin-top: 6px;
 	margin-bottom: 6px;	
@@ -255,7 +257,6 @@ window#waybar.hidden {
 	border-radius: 10px;
 	transition: none;
 	color: #eae7f5;
-	
 }
 
 #tray {

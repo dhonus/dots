@@ -14,3 +14,4 @@ vim.opt.termguicolors = true
 
 vim.cmd('highlight Normal guibg=NONE ctermbg=NONE')
 
+vim.opt.cursorline = true
