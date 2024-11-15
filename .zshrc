@@ -106,6 +106,7 @@ source /usr/share/nvm/init-nvm.sh
 alias vim="nvim"
 alias v="NVIM_APPNAME=astronvim nvim ~/.config/astronvim/init.lua"
 alias emac="emacs -nw"
+alias icat="kitten icat"
 
 export PATH="$(yarn global bin):$PATH"
 
