@@ -20,6 +20,7 @@ config.colors = {
 config.color_scheme = 'Chalk (dark) (terminal.sexy)'
 
 config.window_background_opacity = 0.8
+config.enable_wayland = false
 
 return config
 

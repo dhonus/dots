@@ -16,7 +16,6 @@
     "modules-right": [
         "custom/music",
         "cava",
-        "backlight",
         "pulseaudio",
         "pulseaudio/slider",
         "battery"
