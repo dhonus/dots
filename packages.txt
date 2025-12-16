@@ -11,3 +11,5 @@ wezterm
 lua-language-server
 dunst
 ripgrep
+rofi
+mommy
