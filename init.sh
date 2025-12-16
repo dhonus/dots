@@ -34,6 +34,8 @@ ln -sf $PWD/.wezterm.lua $HOME/.wezterm.lua
 mkdir $HOME/.config/dunst
 ln -sf $PWD/dunstrc $HOME/.config/dunst/dunstrc
 
+ln -sf $PWD/rofi/config.rasi $HOME/.config/rofi/config.rasi
+
 read -p "Install vim-plug? [y/N] " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
