@@ -45,3 +45,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 
 -- open on startup
 --vim.cmd("NvimTreeToggle")
+
+-- set Ctrl+C to copy to clipboard
+vim.keymap.set('v', '<C-c>', '"+y', { noremap = true })

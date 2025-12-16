@@ -6,8 +6,9 @@
         "hyprland/workspaces",
         "cpu",
         "memory",
-        "hyprland/window",
-        "custom/media"
+        "custom/media",
+        "custom/aqi",
+        "custom/weather"
     ],
     "modules-center": [
         "clock",
@@ -178,12 +179,22 @@
         "format": " ",
         "on-click": "hyprctl dispatch exit"
     },
+    "custom/aqi": {
+        "format": "{icon} {0}",
+        "max-length": 50,
+        "format-icons": {
+            "default": "🜁"
+        },
+        "escape": true,
+        "exec": " bash /home/daniel/workspace/personal/aqi.sh | head",
+        "interval": 15
+    },
     "custom/music": {
         "format": "{icon} {0}",
         "max-length": 50,
         "format-icons": {
-            "spotify": " ",
-            "default": " "
+            "default": " ",
+            "spotify": " "
         },
         "escape": true,
         "exec": " bash /home/daniel/workspace/personal/music-status-bash/current_song | head",
@@ -203,5 +214,12 @@
         "format": "|",
         "interval": "once",
         "tooltip": false
-    }
+    },
+    "custom/weather": {
+        "format": "{}°",
+        "tooltip": true,
+        "interval": 15,
+        "exec": "wttrbar --location 49.82237297279585,18.18699148644667",
+        "return-type": "json"
+    },
 }

@@ -107,9 +107,23 @@ alias vim="nvim"
 alias v="NVIM_APPNAME=astronvim nvim ~/.config/astronvim/init.lua"
 alias emac="emacs -nw"
 alias icat="kitten icat"
+alias lg="lazygit"
+alias rec='wf-recorder -a --audio-backend=pipewire -g "$(slurp)" -f "recording.mp4"'
 
 export PATH="$(yarn global bin):$PATH"
 
 export PATH=$PATH:~/.cargo/bin/
 
 export PATH=$PATH:/home/daniel/workspace/work/pgdist/src
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/daniel/.dart-cli-completion/zsh-config.zsh ]] && . /home/daniel/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+# ~/.zshrc
+# precmd() { mommy -1 -s $? }
+set -o PROMPT_SUBST
+# RPS1='$(mommy -1 -s $?)'
+# make it mommy and then the timesteamp of the last command
+RPS1='$(mommy -1 -s $?) %*'
